@@ -1,0 +1,9 @@
+.tmMember {background: #efefef; text-align: center; color: #0000cd; border: 2px solid #cfcfcf; border-radius: 7px; width: 600px; padding-bottom: 10px;}
+.tmPic {background: #c0c0c0; border: 1px solid #0f0f0f; float: right; width: 200px;}
+.tmPicCap {color: black; text-align: left; text-indent: 30pt; padding: 2px;}
+.tmName {color: #0000aa; font-size: 25pt;}
+.tmAka {font-size: 15pt; color: black;}
+.tmTxt {color: black; text-align: center; text-decoration: underline; font-size: 14pt; font-weight: bold;}
+.tmMotto {color: #ff2929; text-align: center; font-style: italic; font-size: 12pt;}
+.tmJob {color: #000079; text-align: center;}
+.tmBio {color: #000079; text-align: center;}

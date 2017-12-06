@@ -1,0 +1,29 @@
+/*tags*/
+body {background-image:url('../Images/bgnd.png'); background-repeat: repeat; margin-left: auto; margin-right: auto; width: 1300px; text-align: center;}
+
+/*header related stuff*/
+#header {text-align: center; background: #444444; margin-left: auto; margin-right: auto; width: 1300px; text-decoration: none;}
+.headimg {text-align: center; margin-left: -225px; margin-right: auto; text-decoration: none;}
+#links {width: 1000px; height: 40px; background: #00003c; border: 2px solid #000074; margin-left: auto; margin-right: auto; text-align: center;}
+.link {color: #ffffff; padding-left: 45px; font-size: 20pt; text-decoration: none; margin-left: auto; margin-right: auto;}
+/*loginbox stuff*/
+#loginbox {background: #999999; border-radius: 10px; border: 3px solid #777777; color: blue; font-size: 11pt; width: 215px; float: left;}
+.username {color: white; font-weight: bold; font-size: 14pt;}
+.error {color: red; font-weight: bold; text-decoration: underline;}
+.success {color: blue; font-size: 20pt; width: 600px; background: #dfdfdf; border: 2px solid #9f9f9f; padding: 3px;}
+
+/*main content*/
+#content {border: 1px solid #1f1f1f; color: black; width: 900px; background: white; margin-left: auto; margin-right: auto;}
+#title {color: blue; text-align: center; text-decoration: underline; font-size: 25pt;}
+#siteDesc {color: black; text-align: center; text-indent: 30pt; font-size: 17pt;}
+.topLinks {text-align: left; font-size: 9pt; color: black; text-indent: 60pt;} /*links to previous pages in Games/Forums*/
+
+/*footer related stuff*/
+#footer {height: 50px; color: black; font-size: 10pt; border-top: 1px solid white; margin-left: auto; margin-right: auto; width: 275px;}
+
+/*news stuff*/
+.newsPost {color: black; text-align: center; background: #d0d0d0; border-radius: 3px; font-size: 12pt; width: 650px; margin-left: auto; margin-right: auto;}
+.newsTitle {color: #000079; font-size: 18pt; font-weight: bold; text-decoration: underline; text-align: left; text-indent: 60pt;}
+.newsPoster {color: blue; font-style: italic; font-size: 10pt;}
+.newsDate {color: #1f1f1f; padding-left: 100px; font-style: italic; text-decoration: underline; font-size: 8pt;}
+.newsContent {text-indent: 30pt; text-align: left;}

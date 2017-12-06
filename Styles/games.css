@@ -1,0 +1,29 @@
+.game {text-align: center; width: 600px; background: #cbcbcb; border: 2px solid #999999;}
+.gmTitle {text-decoration: underline; color: #0000ff; font-weight: bold; font-size: 20pt;}
+.gmLogo {float: right; padding-right: 1px; padding-top: 1px; max-width: 200px; max-height: 200px}
+.gmDesc {color: black; text-indent: 30pt; text-align: left; padding-left: 30px;}
+.gmTxt {font-size: 13pt; color: black; font-weight: bold; text-decoration: underline;}
+.gmMembers {color: #000077; font-size: 14pt; font-weight: bold;}
+
+.gmDownload {float: right; padding: 20px;}
+.gmLinkBx {width: 250px; background: #00003c; border: 4px solid #0000bb; margin-right: auto; margin-left: auto; padding-bottom: 10px}
+.gmLink {text-align: center; width: 50px; background: #0000bb; color: white; border: 3px solid #0000bb; text-decoration: none;}
+.gmNorm {font-size: 8pt; font-weight: normal; color: blue; text-decoration: none;}
+
+.gmForum {width: 500px; text-align: center; background: #ababab; border: 2px solid #888888;}
+.gmFrmName {font-weight: bold; font-size: 23pt; text-decoration: underline; color: #000099;}
+.gmFrmDesc {color: black; text-indent: 30pt;}
+
+.gmReview {width: 400px; background: #aaaaaa; border: 1px solid black; border-radius: 7px;}
+.gmStar {padding: 2px;}
+.gmRevCont {text-indent: 30pt; text-align: left; color: black; font-size: 13pt;}
+.gmRevPoster {text-decoration: underline; color: blue; font-size: 12pt;}
+.gmRevDate {color: red; text-decoration: underline; font-size: 8pt; padding-left: 65px;}
+.gmRevForm {text-align: center;}
+
+.gmDevStat {color: white; font-size: 17pt; text-decoration: underline; font-weight: bold; background: #000088; border: 1px solid #999999; padding: 2px;}
+.gmUpdate{text-align: center; width: 700px; background: #cccccc; border: 2px solid #a9a9a9;}
+.gmUpdateTitle {color: #0000aa; font-size: 20pt; text-decoration: underline; font-weight: bold;}
+.gmUpdateCont {color: black; text-indent: 30pt; font-size: 12pt;}
+.gmUpdatePoster {color: blue; font-size: 14pt; text-decoration: underline;}
+.gmUpdateDate {color: red; font-size: 11pt; padding-left: 350px; text-decoration: underline;}
