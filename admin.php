@@ -4,12 +4,12 @@
   $curFile = $_SERVER['REQUEST_URI'];
   session_start();
 	$website = mysql_connect("localhost", get_db_username(), get_db_password());
-	mysql_select_db("h2ndxygv_Main", $website);
+	mysql_select_db("hqlkiaju_Main", $website);
 	
 	if (!$_SESSION['name'] || $_SESSION['name']=="out")
-	Header("Location: http://www.22ndcg.org/login.php?referer=$curFile&e=You+must+login+to+see+this+page!");
+	Header("Location: http://www.22ndcg.com/login.php?referer=$curFile&e=You+must+login+to+see+this+page!");
 	else if (!$_SESSION['admin'])
-	Header("Location: http://www.22ndcg.org/login.php?referer=$curFile&e=You+do+not+have+permision+to+view+this+page!");
+	Header("Location: http://www.22ndcg.com/login.php?referer=$curFile&e=You+do+not+have+permision+to+view+this+page!");
 	
 	$cmd = $_GET['cmd'];
 	if (!isset($cmd))
@@ -121,7 +121,7 @@
 						{
 						  mysql_query("UPDATE Admins SET Password='$npw1' WHERE Username='".$_SESSION['name']."'", $website);
 							print "<div style=\"padding-left: 150px;\"><p class=\"success\">Your password has been changed.</p></div>";
-							print "<meta http-equiv=\"refresh\" content=\"3; url=http://www.22ndcg.org/admin.php?cmd=profile\">";
+							print "<meta http-equiv=\"refresh\" content=\"3; url=http://www.22ndcg.com/admin.php?cmd=profile\">";
 						}
 					}
 					if (!$done)
@@ -203,12 +203,12 @@
 					$data = mysql_fetch_array($query);
 					
 					$to = $data[3];
-					$headers = "From: admin@22ndcg.org\r\nContent-type: text/html;\r\n";
+					$headers = "From: admin@22ndcg.com\r\nContent-type: text/html;\r\n";
 					$subject = "22nd Century Games - Account Deletion Notice";
 					$message = "<html><head><title>22nd Century Games - Account Deletion Notice</title></head><body>";
 					$message .= "Dear ".$data[1].",<br>";
-					$message .= "<p style=\"text-indent: 15pt;\">Your account at <a href=\"http://www.22ndcg.org\">22nd Century Games</a> has been deleted due to us receiving numerous complaints about your online activity on our site. If you need more information, or feel that this was a mistake, <a href=\"mailto:admin@22ndcg.org\">Contact Us</a>.</p>";
-					$message .= "Thanks,<br><a href=\"http://www.22ndcg.org/team.php\">The 22nd Century Gaming Team</a>";
+					$message .= "<p style=\"text-indent: 15pt;\">Your account at <a href=\"http://www.22ndcg.com\">22nd Century Games</a> has been deleted due to us receiving numerous complaints about your online activity on our site. If you need more information, or feel that this was a mistake, <a href=\"mailto:admin@22ndcg.com\">Contact Us</a>.</p>";
+					$message .= "Thanks,<br><a href=\"http://www.22ndcg.com/team.php\">The 22nd Century Gaming Team</a>";
 					$message .= "</body></html>";
 					mail($to, $subject, $message, $headers);
 					
@@ -311,7 +311,7 @@
 						mysql_query("DELETE FROM Forum WHERE Game='$game'", $website);
 						mysql_query("DELETE FROM Game WHERE Id='$game'", $website);
 						print "<pre>                               <p class=\"success\">Game $game was deleted. Ass</p></pre>";
-						print "<meta http-equiv=\"refresh\" content=\"2;http://www.22ndcg.org/admin.php?cmd=games&opt=del\">";
+						print "<meta http-equiv=\"refresh\" content=\"2;http://www.22ndcg.com/admin.php?cmd=games&opt=del\">";
 					}
 					else
 					{
@@ -350,7 +350,7 @@
 							  $stat = $_POST['stat'];
 								mysql_query("UPDATE Game SET Status='$stat' WHERE Id='$game'", $website);
 								print mysql_error();
-								print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.org/admin.php?cmd=games&opt=edit&sopt=stat&game=$game\">";
+								print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.com/admin.php?cmd=games&opt=edit&sopt=stat&game=$game\">";
 							}
 							else
 							{

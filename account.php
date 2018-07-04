@@ -3,7 +3,7 @@
   include("Util/Config.php");
   session_start();
 	$website = mysql_connect("localhost", get_db_username(), get_db_password());
-	mysql_select_db("h2ndxygv_Main", $website);
+	mysql_select_db("hqlkiaju_Main", $website);
 	
 	$curFile = $_SERVER['REQUEST_URI'];
 	$user = $_GET['user'];
@@ -12,15 +12,15 @@
 	while ($data = mysql_fetch_array($tmp))
 	{
 	  if ($data[0]==$user)
-		Header("Location: http://www.22ndcg.org/team.php#$user");
+		Header("Location: http://www.22ndcg.com/team.php#$user");
 	}
 	
 	//redirect admins
 	if ($_SESSION['admin'] && !$user)
-	Header("Location: http://www.22ndcg.org/admin.php?cmd=profile");
+	Header("Location: http://www.22ndcg.com/admin.php?cmd=profile");
 	
 	if (!$_SESSION['name'] || $_SESSION['name']=="out")
-	Header("Location: http://www.22ndcg.org/login.php?referer=$curFile&e=You+must+login+to+see+this+page!");
+	Header("Location: http://www.22ndcg.com/login.php?referer=$curFile&e=You+must+login+to+see+this+page!");
 ?>
 
 <html>
@@ -113,7 +113,7 @@
 					{
 					  mysql_query("UPDATE Users SET Password='$npw1' WHERE Username='".$_SESSION['name']."'", $website);
 						print "<div style=\"padding-left: 200px;\"><p class=\"success\">Your password have been successfully changed.</p>(Page will reset in 3 seconds)</div>";
-						print "<meta http-equiv=\"refresh\" content=\"3; url=http://www.22ndcg.org/account.php\">";
+						print "<meta http-equiv=\"refresh\" content=\"3; url=http://www.22ndcg.com/account.php\">";
 					}
 				}
 				if (!$done)

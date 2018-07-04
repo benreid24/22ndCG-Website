@@ -2,7 +2,7 @@
   session_start();
   include("Config.php");
 	$website = mysql_connect("localhost", get_db_username(), get_db_password());
-	mysql_select_db("h2ndxygv_Main", $website);
+	mysql_select_db("hqlkiaju_Main", $website);
 	
 	$done = $_POST['done'];
 	$name = $_POST['name'];
@@ -12,7 +12,7 @@
 	if (!$page)
 	$page = $_GET['ref'];
 	if (!$page)
-	Header("Location: http://www.22ndcg.org/");
+	Header("Location: http://www.22ndcg.com/");
 	
   if ($_SESSION['name'] && $_SESSION['name']!="out")
 	{
@@ -56,11 +56,11 @@
 		<?php
 		  if ($done)
 			{
-			  $to = "feedback@22ndcg.org";
+			  $to = "feedback@22ndcg.com";
 				$subject = "Error reported for: $page";
 				$message = "An error has been reported by $name ($email) on $page\r\n\r\n";
 				$message .= "$issue";
-				$headers = "From: admin@22ndcg.org";
+				$headers = "From: admin@22ndcg.com";
 				mail($to, $subject, $message, $headers);
 				print "<div style=\"padding-left: 150px;\"><p class=\"success\">Your error has been reported.<br>Thankyou for your time!</p></div>";
 			}

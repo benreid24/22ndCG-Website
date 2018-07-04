@@ -3,7 +3,7 @@
   include("Util/Config.php");
   session_start();
 	$website = mysql_connect("localhost", get_db_username(), get_db_password());
-	mysql_select_db("h2ndxygv_Main", $website);
+	mysql_select_db("hqlkiaju_Main", $website);
 
   $game = $_GET['game'];
 	if (!isset($game))
@@ -159,7 +159,7 @@
 							  if ($inserted)
 								{
 									print "<div style=\"display: table; margin: 0 auto;\"><p class=\"success\">Your review has been posted!<br><a href=\"games.php?game=$game&cmd=rev\">Back</a></p></div>";
-									print "<meta http-equiv=\"refresh\" content=\"2.5; http://www.22ndcg.org/games.php?game=$game&link=rev\">";
+									print "<meta http-equiv=\"refresh\" content=\"2.5; http://www.22ndcg.com/games.php?game=$game&link=rev\">";
 								}
 								else
 								{
@@ -201,8 +201,8 @@
 							$issue = $_POST['iss'];
 							$info = $_POST['info'];
 							
-							$to = "feedback@22ndcg.org";
-							$headers = "From: admin@22ndcg.org";
+							$to = "feedback@22ndcg.com";
+							$headers = "From: admin@22ndcg.com";
 							$subject = "$issue for $gameName";
 							$message = "$name ($email) has submited a $issue for $gameName.\r\n\r\n\r\n";
 							$message .= "Info submited: $info";

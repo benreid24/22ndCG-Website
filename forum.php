@@ -3,7 +3,7 @@
   include("Util/Config.php");
   session_start();
 	$website = mysql_connect("localhost", get_db_username(), get_db_password());
-	mysql_select_db("h2ndxygv_Main", $website);
+	mysql_select_db("hqlkiaju_Main", $website);
 	
 	$_SERVER['REQUEST_URI'];
 	
@@ -17,7 +17,7 @@
 	if (!isset($forum))
 	$forum = $_POST['forum'];
 	if (!isset($forum))
-	Header("Location: http://www.22ndcg.org/games.php?game=$game&link=for");
+	Header("Location: http://www.22ndcg.com/games.php?game=$game&link=for");
 	
 	$thread = $_GET['thrd'];
 	if (!isset($thread))
@@ -32,7 +32,7 @@
 	$cmd = "none";
 	
 	if ($cmd!="none" && (!$_SESSION['name'] || $_SESSION['name']=="out"))
-	Header("Location: http://www.22ndcg.org/login.php?e=You+must+login+to+use+the+forums!&referer=$curFile");
+	Header("Location: http://www.22ndcg.com/login.php?e=You+must+login+to+use+the+forums!&referer=$curFile");
 ?>
 
 <html>
@@ -133,8 +133,8 @@
 						$tmp = mysql_fetch_array($jerk);
 						$comps = $tmp[6]+1;
 						mysql_query("UPDATE Users SET Complaints='$comps' WHERE Username='".$data[1]."'", $website);
-						mail("admin@22ndcg.org", "Forum Post Reported", "A post on this <a href=\"http://www.22ndcg.org/forum.php?game=$game&forum=$forum&thrd=$thread\">page</a> has been reported", "From: admin@22ndcg.org\r\nContent-type: text/html;\r\n");
-						print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.org/forum.php?game=$game&forum=$forum&thrd=$thread\">";
+						mail("admin@22ndcg.com", "Forum Post Reported", "A post on this <a href=\"http://www.22ndcg.com/forum.php?game=$game&forum=$forum&thrd=$thread\">page</a> has been reported", "From: admin@22ndcg.com\r\nContent-type: text/html;\r\n");
+						print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.com/forum.php?game=$game&forum=$forum&thrd=$thread\">";
 					}
 					if ($cmd=="edit")
 					{
@@ -149,7 +149,7 @@
 							$cont = clean($cont);
 							$post = clean($post);
 							mysql_query("UPDATE ForumPosts SET Content='$cont' WHERE Id='$post'", $website);
-							print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.org/forum.php?game=$game&forum=$forum&thrd=$thread\">";
+							print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.com/forum.php?game=$game&forum=$forum&thrd=$thread\">";
 						}
 						else
 						{
@@ -176,7 +176,7 @@
 					  $post = $_GET['data'];
 						$post = clean($post);
 						mysql_query("DELETE FROM ForumPosts WHERE Id='$post'", $website);
-						print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.org/forum.php?game=$game&forum=$forum&thrd=$thread\">";
+						print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.com/forum.php?game=$game&forum=$forum&thrd=$thread\">";
 					}
 					if ($cmd=="post")
 					{
@@ -187,7 +187,7 @@
 						$poster = clean($poster);
 						$date = clean($date);
 						mysql_query("INSERT INTO ForumPosts (Thread, Poster, Content, Date) VALUES('$thread', '$poster', '$content', '$date')", $website);
-						print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.org/forum.php?game=$game&forum=$forum&thrd=$thread\">";
+						print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.com/forum.php?game=$game&forum=$forum&thrd=$thread\">";
 					}
 				}
 			}
@@ -258,7 +258,7 @@
 							$query = mysql_query("SELECT * FROM Threads WHERE Name='$title'", $website);
 							$data = mysql_fetch_array($query);
 							$id = $data[3];
-							print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.org/forum.php?game=$game&forum=$forum&thrd=$id\">";
+							print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.com/forum.php?game=$game&forum=$forum&thrd=$id\">";
 						}
 						else
 						{
@@ -288,9 +288,9 @@
 						mysql_query("UPDATE Users SET Complaints='$comps' WHERE Username='$poster'", $website);
 						mysql_query("UPDATE Threads SET Reported='1' WHERE Id='$thrd'", $website);
 						
-						mail("admin@22ndcg.org", "Forum Thread Reported", "A thread on this <a href=\"http://www.22ndcg.org/forum.php?game=$game&forum=$forum&thrd=$thrd\">page</a> has been reported", "From: admin@22ndcg.org\r\nContent-type: text/html;\r\n");
+						mail("admin@22ndcg.com", "Forum Thread Reported", "A thread on this <a href=\"http://www.22ndcg.com/forum.php?game=$game&forum=$forum&thrd=$thrd\">page</a> has been reported", "From: admin@22ndcg.com\r\nContent-type: text/html;\r\n");
 						
-						print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.org/forum.php?game=$game&forum=$forum\">";
+						print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.com/forum.php?game=$game&forum=$forum\">";
 					}
 					if ($cmd=="del")
 					{
@@ -298,7 +298,7 @@
 						$thrd = clean($thrd);
 						mysql_query("DELETE FROM ForumPosts WHERE Thread='$thrd'", $website);
 						mysql_query("DELETE FROM Threads WHERE Id='$thrd'", $website);
-						print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.org/forum.php?game=$game&forum=$forum\">";
+						print "<meta http-equiv=\"refresh\" content=\"0;http://www.22ndcg.com/forum.php?game=$game&forum=$forum\">";
 					}
 					if ($cmd=="edit")
 					{
@@ -317,7 +317,7 @@
 							$title = clean($title);
 							mysql_query("UPDATE Threads SET Name='$title' WHERE Id='$thrd'", $website);
 							print "<div style=\"padding-left: 150px;\"><p class=\"success\">Saved</p></div>";
-							print "<meta http-equiv=\"refresh\" content=\"2;http://www.22ndcg.org/forum.php?game=$game&forum=$forum\">";
+							print "<meta http-equiv=\"refresh\" content=\"2;http://www.22ndcg.com/forum.php?game=$game&forum=$forum\">";
 						}
 						else
 						{

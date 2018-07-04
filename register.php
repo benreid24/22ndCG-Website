@@ -3,7 +3,7 @@
   include("Util/Config.php");
   session_start();
 	$website = mysql_connect("localhost", get_db_username(), get_db_password());
-	mysql_select_db("h2ndxygv_Main", $website);
+	mysql_select_db("hqlkiaju_Main", $website);
 	$curFile = $_SERVER['REQUEST_URI'];
 	
 	$step = $_POST['step'];
@@ -82,12 +82,12 @@
 					$id = $data[0];
 				
 				  $text = "<html><head><title>22nd Century Games - Registration</title></head><body>";
-					$text .= "This email ($email) has been registered at <a href=\"http://www.22ndcg.org/\">22nd Century Games</a> by $name.<br><br>";
-					$text .= "Confirm your registration <a href=\"http://www.22ndcg.org/confirm.php?id=$id&cmd=c\">here</a>.<br>";
-					$text .= "Not you? You can delete your account <a href=\"http://www.22ndcg.org/confirm.php?id=$id&cmd=d\">here</a>.";
+					$text .= "This email ($email) has been registered at <a href=\"http://www.22ndcg.com/\">22nd Century Games</a> by $name.<br><br>";
+					$text .= "Confirm your registration <a href=\"http://www.22ndcg.com/confirm.php?id=$id&cmd=c\">here</a>.<br>";
+					$text .= "Not you? You can delete your account <a href=\"http://www.22ndcg.com/confirm.php?id=$id&cmd=d\">here</a>.";
 					$text .= "</body></html>";
 					
-					mail($email, "22nd Century Gaming - Registration Confirmation", $text, "From: admin@22ndcg.org\r\nContent-type: text/html;/r/n");
+					mail($email, "22nd Century Gaming - Registration Confirmation", $text, "From: admin@22ndcg.com\r\nContent-type: text/html;/r/n");
 					
 					print "<p class=\"registerError\">A confirmation email has been sent to <i>$email</i>. When you get the email, just click on the link to activate your account.</p>";
 					print "<br>";

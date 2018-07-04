@@ -11,16 +11,16 @@
 	if (!isset($referer))
 	  $referer = $_POST['referer'];
 	if (!isset($referer))
-	  $referer = "http://www.22ndcg.org/login.php";
+	  $referer = "http://www.22ndcg.com/login.php";
   
     if (!strpos($referer,"22ndcg."))
-		$referer = "http://22ndcg.org".$referer;
+		$referer = "http://22ndcg.com".$referer;
 	
 	print("Referred by: ".$referer);
 	
     session_start();
 	$website = mysql_connect("localhost", get_db_username(), get_db_password());
-	mysql_select_db("h2ndxygv_Main", $website);
+	mysql_select_db("hqlkiaju_Main", $website);
 	
 	if ($command=="Login")
 	{
@@ -60,7 +60,7 @@
 	    $_SESSION['name'] = "out";
 		$_SESSION['admin'] = false;
 		$error = "You have been successfully logged out.";
-		$referer = "http://www.22ndcg.org/login.php";
+		$referer = "http://www.22ndcg.com/login.php";
 	}
 ?>	
 
@@ -74,7 +74,7 @@
 <body>
   <div id="header">
 	  <?php
-	      $referer = str_replace("http://22ndcg.org","",$referer);
+	      $referer = str_replace("http://22ndcg.com","",$referer);
 		  include("Util/loginbox.php");
 			print LoginBox($referer);
 		?>

@@ -3,7 +3,7 @@
   include("Util/Config.php");
   session_start();
 	$website = mysql_connect("localhost", get_db_username(), get_db_password());
-	mysql_select_db("h2ndxygv_Main", $website);
+	mysql_select_db("hqlkiaju_Main", $website);
 	
 	$curFile = $_SERVER['REQUEST_URI'];
 ?>
@@ -70,7 +70,7 @@
 				{
 				  $message = $body;
 					$message .= "\r\n\r\n\r\n    From,\r\n$name ($email)";
-					mail("benreid@buffalo.edu,chriszosh96@gmail.com,themilkmentaskforce@gmail.com", "$name", $message, "From: admin@22ndcg.org");
+					mail("benreid@buffalo.edu,chriszosh96@gmail.com,themilkmentaskforce@gmail.com", "$name", $message, "From: admin@22ndcg.com");
 					print "<div style=\"padding-left: 150px;\"><p class=\"success\">Your issue has been submited. You can expect a response within 3 business days. If you don't, try submiting another form yelling at us to get on top of things</p></div>";
 				}
 			}

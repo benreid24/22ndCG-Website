@@ -5,7 +5,7 @@
 	$website = mysql_connect("127.0.0.1:3306", get_db_username(), get_db_password());
 	if (!$website)
 		print("Error connecting db!");
-	if (!mysql_select_db("h2ndxygv_Main", $website))
+	if (!mysql_select_db("hqlkiaju_Main", $website))
 		print("Error selecting db: ".mysql_error());
 	
   $maxPosts = $_GET['mxpsts'];
